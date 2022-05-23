@@ -2,15 +2,15 @@
   background-color: var(--color-section);
 
   &__list {
-    display: flex;
-    margin-top: 50px;
+    // display: flex;
+    // margin-top: 50px;
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
+  // &__item {
+  //   &:not(:last-child) {
+  //     margin-right: 30px;
+  //   }
+  // }
 }
 
 .team__wrap {
