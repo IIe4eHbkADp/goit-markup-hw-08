@@ -1,0 +1,105 @@
+.footer {
+  width: 100%;
+  padding: 60px 0;
+  background-color: var(--bgc-second-color);
+}
+.footer-wrap {
+  display: flex;
+}
+.logo--margin {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.logo__footer {
+  color: var(--main-color);
+}
+.footer-contacts__address {
+  color: var(--main-color);
+}
+
+.footer-contacts__link {
+  color: var(--main-text-color);
+}
+.footer-contacts__link {
+  display: block;
+  margin-top: 9px;
+}
+
+.footer-contacts {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.social-section__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.social-section {
+  padding-top: 12px;
+  margin-left: 70px;
+}
+.footer-social {
+  display: flex;
+}
+.social-block__link--size {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--svg-bg-footer);
+  color: var(--main-color);
+
+  border-radius: 50%;
+  fill: currentColor;
+  transition-property: background-color;
+  @extend %transition;
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-text-color);
+  }
+}
+
+.social.links {
+  color: var(--main-color);
+}
+.social-section--mails {
+  margin-left: 93px;
+}
+.social-section__subscribe {
+  display: flex;
+}
+.social-section__input {
+  width: 358px;
+  padding-left: 16px;
+
+  color: var(--main-color);
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+.button--footer {
+  width: 200px;
+  min-height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+.social-section__icon {
+  margin-left: 10px;
+}

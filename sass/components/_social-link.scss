@@ -1,0 +1,27 @@
+.social-block {
+  display: flex;
+  justify-content: center;
+}
+
+.social-block__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-block__link {
+  @extend %flex-centred;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  fill: currentColor;
+  transition-property: background-color;
+  @extend %transition;
+  color: var(--svg-main-color);
+
+  &:focus,
+  &:hover {
+    fill: var(--main-color);
+    background-color: var(--accent-text-color);
+  }
+}

@@ -1,0 +1,35 @@
+.contacts {
+  margin-left: auto;
+  display: flex;
+  align-items: baseline;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.contacts__icon {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contacts__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--main-text-color);
+  fill: currentColor;
+  transition-property: color;
+  @extend %transition;
+
+  &:focus,
+  &:hover {
+    color: var(--accent-text-color);
+  }
+}
