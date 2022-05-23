@@ -4,11 +4,23 @@
   &__list {
     // display: flex;
     // margin-top: 50px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -30px;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+    @include tablet {
+      width: calc(100% / 2 - 30px);
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
     }
   }
   .section-title {

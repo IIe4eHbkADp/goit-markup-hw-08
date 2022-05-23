@@ -26,6 +26,14 @@ section {
   @include mobile {
     width: 480px;
   }
+
+  @include tablet {
+    width: 786px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .visually-hidden {

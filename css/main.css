@@ -83,6 +83,18 @@ section {
   }
 }
 
+@media screen and (min-width: 786px) {
+  .container {
+    width: 786px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -350,8 +362,25 @@ section {
   background-color: var(--color-section);
 }
 
+@media screen and (min-width: 786px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+}
+
 .team__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 786px) {
+  .team__item {
+    width: calc(100% / 2 - 30px);
+  }
+  .team__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
 }
 
 .team .section-title {
