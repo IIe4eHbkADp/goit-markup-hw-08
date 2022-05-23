@@ -1,3 +1,10 @@
+.services {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
 .services__list {
   display: flex;
   margin-top: 50px;

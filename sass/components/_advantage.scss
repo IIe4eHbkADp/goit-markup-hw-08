@@ -19,13 +19,32 @@
   @extend %flex-centred;
 }
 .advantage__list {
-  display: flex;
+  // display: flex;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 .advantage__item {
-  width: 270px;
+  max-width: 100%;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  @include tablet {
+    width: calc(100% / 2 - 30px);
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+
+  @include desktop {
+    width: calc(100% / 4 - 30px);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 .advantage__text {
