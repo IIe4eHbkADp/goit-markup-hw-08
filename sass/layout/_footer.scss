@@ -78,15 +78,22 @@
 .social-section--mails {
   // margin-left: 93px;
 }
+
 .social-section__subscribe {
-  display: block;
 }
 .social-section__input {
-  width: 358px;
+  display: block;
+  width: 100%;
+  // width: 358px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 20px;
+  @include tablet {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 
   color: var(--main-color);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -94,13 +101,17 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
-.button--footer {
-  width: 200px;
-  min-height: 50px;
+.social-section__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 12px;
+  flex-wrap: nowrap;
+}
+.button--footer {
+  width: 200px;
+  min-height: 50px;
+
+  // margin-left: 12px;
   margin-right: 0;
   padding-right: 0;
   padding-left: 29px;
