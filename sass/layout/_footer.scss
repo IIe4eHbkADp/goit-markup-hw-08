@@ -2,12 +2,14 @@
   width: 100%;
   padding: 60px 0;
   background-color: var(--bgc-second-color);
+  text-align: center;
 }
 .footer-wrap {
-  display: flex;
+  display: block;
 }
 .logo--margin {
   padding: 0;
+  margin-right: 0;
   margin-bottom: 20px;
 }
 .logo__footer {
@@ -29,6 +31,7 @@
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 60px;
 }
 .social-section__title {
   margin-bottom: 20px;
@@ -41,8 +44,9 @@
 }
 
 .social-section {
-  padding-top: 12px;
-  margin-left: 70px;
+  // padding-top: 12px;
+  // margin-left: 70px;
+  margin-bottom: 60px;
 }
 .footer-social {
   display: flex;
@@ -72,14 +76,17 @@
   color: var(--main-color);
 }
 .social-section--mails {
-  margin-left: 93px;
+  // margin-left: 93px;
 }
 .social-section__subscribe {
-  display: flex;
+  display: block;
 }
 .social-section__input {
   width: 358px;
   padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
 
   color: var(--main-color);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -90,7 +97,6 @@
 .button--footer {
   width: 200px;
   min-height: 50px;
-
   display: flex;
   justify-content: center;
   align-items: center;
