@@ -3,10 +3,23 @@
   padding: 60px 0;
   background-color: var(--bgc-second-color);
   text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 .footer-wrap {
-  display: block;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
 }
+
 .logo--margin {
   padding: 0;
   margin-right: 0;
@@ -44,9 +57,12 @@
 }
 
 .social-section {
-  // padding-top: 12px;
-  // margin-left: 70px;
   margin-bottom: 60px;
+  @include desktop {
+    padding-top: 12px;
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
 }
 .footer-social {
   display: flex;
@@ -76,23 +92,33 @@
   color: var(--main-color);
 }
 .social-section--mails {
-  // margin-left: 93px;
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 
 .social-section__subscribe {
+  display: block;
+  @include desktop {
+    display: flex;
+  }
 }
 .social-section__input {
   display: block;
   width: 100%;
-  // width: 358px;
+
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 20px;
   @include tablet {
-    max-width: 450px;
+    width: 450px;
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+  @include desktop {
+    width: 358px;
+    margin-bottom: 0;
   }
 
   color: var(--main-color);
@@ -111,11 +137,14 @@
   width: 200px;
   min-height: 50px;
 
-  // margin-left: 12px;
   margin-right: 0;
   padding-right: 0;
   padding-left: 29px;
   padding-right: 29px;
+
+  @include desktop {
+    margin-left: 12px;
+  }
 }
 .social-section__icon {
   margin-left: 10px;

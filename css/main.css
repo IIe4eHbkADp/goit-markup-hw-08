@@ -246,6 +246,7 @@ section {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -847,8 +848,25 @@ section {
   text-align: center;
 }
 
-.footer-wrap {
-  display: block;
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wrap {
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
 }
 
 .logo--margin {
@@ -895,6 +913,14 @@ section {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .social-section {
+    padding-top: 12px;
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+}
+
 .footer-social {
   display: flex;
 }
@@ -919,6 +945,22 @@ section {
   color: var(--main-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .social-section--mails {
+    margin-left: 93px;
+  }
+}
+
+.social-section__subscribe {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-section__subscribe {
+    display: flex;
+  }
+}
+
 .social-section__input {
   display: block;
   width: 100%;
@@ -935,9 +977,16 @@ section {
 
 @media screen and (min-width: 768px) {
   .social-section__input {
-    max-width: 450px;
+    width: 450px;
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .social-section__input {
+    width: 358px;
+    margin-bottom: 0;
   }
 }
 
@@ -955,6 +1004,12 @@ section {
   padding-right: 0;
   padding-left: 29px;
   padding-right: 29px;
+}
+
+@media screen and (min-width: 1200px) {
+  .button--footer {
+    margin-left: 12px;
+  }
 }
 
 .social-section__icon {
