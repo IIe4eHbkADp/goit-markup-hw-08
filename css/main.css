@@ -124,7 +124,7 @@ section {
 }
 
 .wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   height: 80px;
 }
@@ -138,9 +138,8 @@ section {
 
 .logo {
   display: block;
-  margin-right: 93px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
