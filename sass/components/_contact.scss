@@ -1,28 +1,46 @@
 .contacts {
   margin-left: auto;
-  display: flex;
+
+  display: none;
+
   align-items: baseline;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contacts__item {
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 10px;
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 .contacts__icon {
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
+  @include desktop {
+    margin-right: 10px;
+  }
 }
 
 .contacts__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   color: var(--main-text-color);
   fill: currentColor;
   transition-property: color;
@@ -31,5 +49,33 @@
   &:focus,
   &:hover {
     color: var(--accent-text-color);
+  }
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts_icon--tablet-mail {
+  @include tablet {
+    width: 14px;
+    height: 10px;
+  }
+  @include desktop {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts_icon--tablet-tel {
+  @include tablet {
+    width: 10px;
+    height: 14px;
+  }
+
+  @include desktop {
+    width: 10px;
+    height: 16px;
   }
 }

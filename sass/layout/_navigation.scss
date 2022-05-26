@@ -6,9 +6,6 @@
 }
 
 .logo {
-  // margin-right: 93px;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
   display: inline-block;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -19,6 +16,16 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-text-color);
+
+  @include tablet {
+    display: inline-flex;
+  }
+
+  @include desktop {
+    margin-right: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .logo__header {
   color: var(--logo-color);

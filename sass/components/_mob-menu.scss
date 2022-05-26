@@ -19,6 +19,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
+  @extend %transition;
   &:hover {
     fill: var(--accent-text-color);
   }
@@ -35,8 +36,10 @@
   height: 100vh;
 
   &__icon--close {
+    transition-property: color;
+    @extend %transition;
     &:hover {
-      fill: var(--accent-text-color);
+      color: var(--accent-text-color);
     }
   }
 
@@ -55,6 +58,8 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+    transition-property: color;
+    @extend %transition;
 
     &:hover,
     &:focus {
@@ -95,6 +100,8 @@
     letter-spacing: 0.02em;
 
     color: var(--main-text-color);
+    transition-property: color;
+    @extend %transition;
 
     &:hover,
     &:focus {
@@ -110,6 +117,8 @@
     letter-spacing: 0.02em;
 
     color: var(--main-text-color);
+    transition-property: color;
+    @extend %transition;
     &:hover,
     &:focus {
       color: var(--accent-text-color);

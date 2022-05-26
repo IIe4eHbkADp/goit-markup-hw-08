@@ -30,7 +30,7 @@ img {
   align-items: center;
 }
 
-.navigation__link, .contacts__link, .button--active, .company__link, .social-block__link, .button-filter, .modal-close, .social-block__link--size {
+.navigation__link, .contacts__link, .button--active, .company__link, .social-block__link, .button-filter, .modal-close, .social-block__link--size, .mob-menu__icon--open, .mob-menu__icon--close, .mob-menu__link, .mob-menu-contacts__mail, .mob-menu-contacts__tel {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -124,10 +124,37 @@ section {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .header .container {
+    display: block;
+  }
+}
+
 .wrapper {
   display: none;
   align-items: center;
   height: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation-wrap {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .is-open {
@@ -151,6 +178,20 @@ section {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .logo__header {
@@ -198,7 +239,7 @@ section {
 
 .contacts {
   margin-left: auto;
-  display: flex;
+  display: none;
   align-items: baseline;
   font-weight: 500;
   font-size: 14px;
@@ -206,19 +247,42 @@ section {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
 .contacts__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts__icon {
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    margin-right: 10px;
+  }
 }
 
 .contacts__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--main-text-color);
   fill: currentColor;
   transition-property: color;
@@ -226,6 +290,41 @@ section {
 
 .contacts__link:focus, .contacts__link:hover {
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts_icon--tablet-mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts_icon--tablet-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts_icon--tablet-tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts_icon--tablet-tel {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .hero {
@@ -1059,8 +1158,12 @@ section {
   height: 100vh;
 }
 
+.mob-menu__icon--close {
+  transition-property: color;
+}
+
 .mob-menu__icon--close:hover {
-  fill: var(--accent-text-color);
+  color: var(--accent-text-color);
 }
 
 .mob-menu__item:not(:last-child) {
@@ -1074,6 +1177,7 @@ section {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition-property: color;
 }
 
 .mob-menu__link:hover, .mob-menu__link:focus {
@@ -1114,6 +1218,7 @@ section {
   line-height: calc(28 / 24);
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition-property: color;
 }
 
 .mob-menu-contacts__mail:hover, .mob-menu-contacts__mail:focus {
@@ -1127,6 +1232,7 @@ section {
   line-height: calc(47 / 34);
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition-property: color;
 }
 
 .mob-menu-contacts__tel:hover, .mob-menu-contacts__tel:focus {

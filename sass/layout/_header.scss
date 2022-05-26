@@ -1,12 +1,32 @@
 .header {
   border-bottom: 1px solid var(--border-main-color);
   position: relative;
+
+  .container {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include desktop {
+        display: block;
+      }
+    }
+  }
 }
 .wrapper {
-  // display: flex;
   display: none;
   align-items: center;
   height: 80px;
+  @include tablet {
+    display: flex;
+  }
+}
+.navigation-wrap {
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .is-open {
