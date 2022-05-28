@@ -124,20 +124,6 @@ section {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
-  .header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .header .container {
-    display: block;
-  }
-}
-
 .wrapper {
   display: none;
   align-items: center;
@@ -147,6 +133,14 @@ section {
 @media screen and (min-width: 768px) {
   .wrapper {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -235,9 +229,10 @@ section {
   background-color: var(--accent-text-color);
 }
 
-.contacts-wrap {
-  margin-bottom: 0;
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .contacts-wrap {
+    margin-left: auto;
+  }
 }
 
 .contacts {
@@ -291,7 +286,6 @@ section {
 
 .contacts__link {
   display: flex;
-  justify-content: center;
   align-items: center;
   color: var(--main-text-color);
   fill: currentColor;

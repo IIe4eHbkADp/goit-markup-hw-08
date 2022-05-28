@@ -1,6 +1,7 @@
 .contacts-wrap {
-  margin-bottom: 0;
-  margin-left: auto;
+  @include desktop {
+    margin-left: auto;
+  }
 }
 
 .contacts {
@@ -49,7 +50,6 @@
 
 .contacts__link {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   color: var(--main-text-color);
