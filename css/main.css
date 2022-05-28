@@ -189,8 +189,6 @@ section {
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -237,8 +235,12 @@ section {
   background-color: var(--accent-text-color);
 }
 
-.contacts {
+.contacts-wrap {
+  margin-bottom: 0;
   margin-left: auto;
+}
+
+.contacts {
   display: none;
   align-items: baseline;
   font-weight: 500;
@@ -256,7 +258,7 @@ section {
 @media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
-    margin-left: auto;
+    align-items: center;
   }
 }
 
@@ -267,6 +269,12 @@ section {
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
     margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 
@@ -282,7 +290,9 @@ section {
 }
 
 .contacts__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--main-text-color);
   fill: currentColor;
   transition-property: color;

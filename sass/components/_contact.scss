@@ -1,6 +1,9 @@
-.contacts {
+.contacts-wrap {
+  margin-bottom: 0;
   margin-left: auto;
+}
 
+.contacts {
   display: none;
 
   align-items: baseline;
@@ -16,7 +19,7 @@
 
   @include desktop {
     display: flex;
-    margin-left: auto;
+    align-items: center;
   }
 }
 
@@ -29,6 +32,12 @@
       margin-right: 50px;
     }
   }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 .contacts__icon {
   vertical-align: middle;
@@ -39,7 +48,9 @@
 }
 
 .contacts__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   color: var(--main-text-color);
   fill: currentColor;
